@@ -41,7 +41,7 @@ const TileView = ({ students, onTileClick }) => {
     setStudentList(students);
   }, [students]);
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 pt-20  ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 bg-[#605c5c] lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 pt-20  ">
       {studentList?.map((student, index) => (
         <Tile
           key={index}
