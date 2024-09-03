@@ -23,24 +23,21 @@ function Navbar() {
     },
   ];
 
-  // Toggle Sidebar Function
-  const toggleSidebar = () => {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
+  const toggleSidebar = useCallback(() => {
+    setIsSidebarCollapsed((prev) => !prev);
     setIsSidebarHoverCollapsed(true);
-  };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        // Assuming 'lg' corresponds to 1024px
         toggleSidebar();
       }
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Initial check
-    handleResize();
+    handleResize(); // Initial check
 
     return () => {
       window.removeEventListener("resize", handleResize);
