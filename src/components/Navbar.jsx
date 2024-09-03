@@ -45,7 +45,7 @@ function Navbar() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [toggleSidebar]);
 
   return (
     <div className="flex max-h-screen relative overflow-hidden">

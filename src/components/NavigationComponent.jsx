@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { useLocation, Link } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
 
 const NavigationComponent = ({ navData, hidden, onClose }) => {
   const location = useLocation();
@@ -19,10 +18,6 @@ const NavigationComponent = ({ navData, hidden, onClose }) => {
       }
     });
   }, [location.pathname, navData]);
-
-  const toggleNested = (label) => {
-    setActiveNested((prev) => ({ [label]: !prev[label] }));
-  };
 
   return (
     <ul className="space-y-3">
