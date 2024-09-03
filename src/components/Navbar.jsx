@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { IoClose } from "react-icons/io5";
 import logo from "../asserts/POC-S3-Logo-Colors.png";
